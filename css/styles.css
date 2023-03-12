@@ -126,6 +126,8 @@ ul {
   letter-spacing: 0.02em;
 
   color: var(--navi-blue);
+
+  transition: var(--transition);
 }
 
 .nav-link:is(:hover, :focus) {
@@ -158,6 +160,8 @@ ul {
   letter-spacing: 0.02em;
 
   color: var(--slate);
+
+  transition: var(--transition);
 }
 
 .contact-link:is(:hover, :focus) {
@@ -416,6 +420,7 @@ ul {
   fill: var(--light-slate);
   border: 1px solid var(--light-slate);
   border-radius: 4px;
+  
   transition: var(--transition);
 }
 
