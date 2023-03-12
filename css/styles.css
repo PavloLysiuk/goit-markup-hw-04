@@ -13,6 +13,7 @@
   --shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
   --button-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   --element-gap: 24px;
+  --transition: all 0.2s ease-in-out;
 }
 
 h1,
@@ -166,8 +167,11 @@ ul {
 /**--------------------- Hero ---------------------*/
 
 .hero {
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 188px;
   padding-bottom: 188px;
+  max-width: 1440px;
   text-align: center;
 
   background-color: var(--navi-blue);
@@ -204,6 +208,7 @@ ul {
   border-radius: 4px;
   border: none;
 
+  transition: var(--transition);
   cursor: pointer;
 }
 
@@ -220,7 +225,6 @@ ul {
 
 .features-list {
   display: flex;
-  flex-wrap: wrap;
   gap: var(--element-gap);
 }
 
@@ -228,32 +232,14 @@ ul {
   width: 264px;
 }
 
-.feature-item::before {
-  content: '';
-  display: block;
+.feature-icon-bg {
   height: 112px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   background-color: var(--cloud);
-  background-repeat: no-repeat;
-  background-position: center;
-
   border-radius: 4px;
-}
-
-.strategy::before {
-  background-image: url(../images/icons/strategy.svg);
-}
-
-.punctuality::before {
-  background-image: url(../images/icons/punctuality.svg);
-}
-
-.diligence::before {
-  background-image: url(../images/icons/diligence.svg);
-}
-
-.technologies::before {
-  background-image: url(../images/icons/technologies.svg);
 }
 
 .feature-title {
@@ -302,11 +288,12 @@ ul {
   border: 1px solid var(--cornflower);
 }
 
-/**--------------------- team ---------------------*/
+/**--------------------- Team ---------------------*/
 
 .team {
   padding-top: 120px;
   padding-bottom: 120px;
+  max-width: 2560px;
 
   background-color: var(--cloud);
 }
@@ -363,48 +350,35 @@ ul {
   letter-spacing: 0.02em;
 }
 
-.social-list {
+.team-social-list {
   display: flex;
   margin-top: 8px;
   gap: var(--element-gap);
 }
 
-.social-item {
+.team-social-item {
   padding: 0;
   margin: 0;
 }
 
-.social-link {
-  display: block;
+.team-social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 40px;
   height: 40px;
 
+  fill: var(--cloud);
   background-color: var(--iris);
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 50%;
 
-  transition: all 0.2s ease-in-out;
+  transition: var(--transition);
 }
 
-.social-link:is(:hover, :focus) {
+.team-social-link:is(:hover, :focus) {
   background-color: var(--ocean);
-}
-
-.social-link.instagram {
-  background-image: url(../images/social/instagram.svg);
-}
-
-.social-link.twitter {
-  background-image: url(../images/social/twitter.svg);
-}
-
-.social-link.facebook {
-  background-image: url(../images/social/facebook.svg);
-}
-
-.social-link.linkedin {
-  background-image: url(../images/social/linkedin.svg);
 }
 
 /**--------------------- Customers---------------------*/
@@ -432,89 +406,25 @@ ul {
   gap: var(--element-gap);
 }
 
-.customers-item:nth-of-type(1) {
+.customers-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 168px;
   height: 88px;
-  /* background-color: black; */
-  padding: 16px 0;
+
+  fill: var(--light-slate);
   border: 1px solid var(--light-slate);
   border-radius: 4px;
-  background-image: url(../images/customers/customer1.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  transition: all 0.2s ease-in-out;
+  transition: var(--transition);
 }
 
-.customers-item:nth-of-type(2) {
-  width: 168px;
-  height: 88px;
-  /* background-color: black; */
-  padding: 16px 0;
-  border: 1px solid var(--light-slate);
-  border-radius: 4px;
-  background-image: url(../images/customers/customer2.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  transition: all 0.2s ease-in-out;
-}
-
-.customers-item:nth-of-type(3) {
-  width: 168px;
-  height: 88px;
-  /* background-color: black; */
-  padding: 16px 0;
-  border: 1px solid var(--light-slate);
-  border-radius: 4px;
-  background-image: url(../images/customers/customer3.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  transition: all 0.2s ease-in-out;
-}
-
-.customers-item:nth-of-type(4) {
-  width: 168px;
-  height: 88px;
-  /* background-color: black; */
-  padding: 16px 0;
-  border: 1px solid var(--light-slate);
-  border-radius: 4px;
-  background-image: url(../images/customers/customer4.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  transition: all 0.2s ease-in-out;
-}
-
-.customers-item:nth-of-type(5) {
-  width: 168px;
-  height: 88px;
-  /* background-color: black; */
-  padding: 16px 0;
-  border: 1px solid var(--light-slate);
-  border-radius: 4px;
-  background-image: url(../images/customers/customer5.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  transition: all 0.2s ease-in-out;
-}
-
-.customers-item:nth-of-type(6) {
-  width: 168px;
-  height: 88px;
-  /* background-color: black; */
-  padding: 16px 0;
-  border: 1px solid var(--light-slate);
-  border-radius: 4px;
-  background-image: url(../images/customers/customer6.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  transition: all 0.2s ease-in-out;
-}
-
-.customers-item:is(:hover, :focus) {
+.customers-link:is(:hover, :focus) {
+  fill: var(--ocean);
   border: 1px solid var(--ocean);
 }
 
-/**--------------------- portfolio ---------------------*/
+/**--------------------- Portfolio ---------------------*/
 
 .portfolio {
   padding-top: 96px;
@@ -649,36 +559,22 @@ ul {
 }
 
 .footer-social-link {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 40px;
   height: 40px;
 
-  background-color: var(--white);
-  opacity: 0.1;
+  fill: var(--cloud);
+  background-color: rgba(255, 255, 255, 0.1);
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 50%;
 
-  transition: all 0.2s ease-in-out;
+  transition: var(--transition);
 }
 
 .footer-social-link:is(:hover, :focus) {
   background-color: var(--green);
   opacity: 1;
-}
-
-.footer-social-link.twitter {
-  background-image: url(../images/social/twitter.svg);
-}
-
-.footer-social-link.facebook {
-  background-image: url(../images/social/facebook.svg);
-}
-
-.footer-social-link.linkedin {
-  background-image: url(../images/social/linkedin.svg);
-}
-
-.footer-social-link.instagram {
-  background-image: url(../images/social/instagram.svg);
 }
