@@ -479,6 +479,8 @@ ul {
   width: 360px;
 
   background-color: var(--white);
+
+  transition: var(--transition);
 }
 
 .portfolio-item:is(:hover, :focus) {
