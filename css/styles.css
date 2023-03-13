@@ -492,6 +492,10 @@ a {
   background-color: var(--white);
 }
 
+.portfolio-link {
+  display: block;
+}
+
 .portfolio-link:is(:hover, :focus) {
   box-shadow: var(--shadow);
 }
