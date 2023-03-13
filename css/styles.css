@@ -223,7 +223,7 @@ ul {
   background: var(--ocean);
 }
 
-/**--------------------- Future ---------------------*/
+/**--------------------- Feature ---------------------*/
 
 .features {
   padding-top: 120px;
@@ -410,6 +410,7 @@ ul {
 .customers-list {
   margin-top: 72px;
   display: flex;
+  flex-wrap: wrap;
   gap: var(--element-gap);
 }
 
@@ -430,6 +431,11 @@ ul {
 .customers-link:is(:hover, :focus) {
   fill: var(--ocean);
   border: 1px solid var(--ocean);
+}
+
+.customers-icon {
+  width: 104px;
+  height: 56px;
 }
 
 /**--------------------- Portfolio ---------------------*/
@@ -483,15 +489,13 @@ ul {
 
 /** ---- Card ---- */
 
-.portfolio-item {
+/* .portfolio-item {
   width: 360px;
 
   background-color: var(--white);
+} */
 
-  /* transition: var(--transition); */
-}
-
-.portfolio-item:is(:hover, :focus) {
+.portfolio-link:is(:hover, :focus) {
   box-shadow: var(--shadow);
 }
 
@@ -553,6 +557,13 @@ ul {
   width: 264px;
   margin-top: 16px;
 
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+
+  color: var(--cloud);
+}
+
+.footer-social-text {
   line-height: 1.5;
   letter-spacing: 0.02em;
 
